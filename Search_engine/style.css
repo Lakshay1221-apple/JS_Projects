@@ -56,3 +56,20 @@ form button {
     cursor : pointer;
 
 }
+
+::placeholder {
+    color : #fff;
+    font-size : 20px;
+}
+#load-more{
+    background : #ff3929;
+    color : #fff;
+    border : 0;
+    outline : 0;
+    padding : 10px 20px;
+    border-radius: 4px;
+    margin: 10px auto 100px;
+    cursor: pointer;
+    display : none;
+
+}
