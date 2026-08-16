@@ -32,6 +32,7 @@
     align-items : center;
     background : rgba(255, 255, 255, 0.1);
     border-radius : 10px;
+    backdrop-filter : blur(10px);
 }
 
 .container::before{
@@ -50,10 +51,26 @@
     content: '';
     width : 180px;
     height : 180px;
-    background : #f41b75;
-    border-radius : 5px;
+    background : #419aff;
+    border-radius : 50%;
     position : absolute;
-    left: -50px;
-    top : -50px;
+    bottom : -50px;
     z-index : -1;
+    right : 30px;
+}
+
+.clock span{
+    position : relative;
+    font-size : 80px;
+    font-weight : 600;
+    letter-spacing : 5px;
+}
+
+.clock span::after{
+    content : 'HOURS';
+    font-size : 16px;
+    position : absolute;
+    bottom : -5px;
+    left : 50%;
+    transform : translateX(-50%);   
 }
