@@ -1,21 +1,114 @@
-*{
-    margin : 0;
-    padding : 0;
-    font-family : 'Poppins', sans-sarif;
-    box-sizing: border-box;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color : #001e4d;
-
+  background: linear-gradient(135deg, #001e4d, #0a2d6b);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.app{
-    background: #fff;
-    width : 90%;
-    max-width : 600px;
-    margin : 100px auto 0;
-    border-radius : 10px;
-    padding : 30px;
- }
+.app {
+  background: #ffffff;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 18px;
+  padding: 30px 25px 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.app h1 {
+  font-size: 2rem;
+  color: #001e4d;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.quiz {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quiz h2 {
+  font-size: 1.4rem;
+  color: #222;
+  line-height: 1.5;
+}
+
+#answer-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  width: 100%;
+  text-align: left;
+  background: #f4f6fa;
+  color: #222;
+  border: 1px solid #dfe3ea;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover:not(:disabled) {
+  background: #eaf1ff;
+  border-color: #7aa7ff;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.btn.correct {
+  background: #d4edda;
+  border-color: #2e7d32;
+  color: #1b5e20;
+}
+
+.btn.incorrect {
+  background: #f8d7da;
+  border-color: #c62828;
+  color: #b71c1c;
+}
+
+#next-button {
+  align-self: flex-end;
+  background: #001e4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: none;
+  transition: opacity 0.2s ease;
+}
+
+#next-button:hover {
+  opacity: 0.95;
+}
+
+@media (max-width: 500px) {
+  .app {
+    padding: 25px 18px 18px;
+  }
+
+  .app h1 {
+    font-size: 1.6rem;
+  }
+
+  .quiz h2 {
+    font-size: 1.15rem;
+  }
+}
